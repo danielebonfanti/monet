@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/monet",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
