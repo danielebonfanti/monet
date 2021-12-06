@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoriesListComponent } from './stories-list.component';
+import { PostsListComponent } from './posts-list.component';
 
 
 
 @NgModule({
   declarations: [
-    StoriesListComponent
+    PostsListComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    StoriesListComponent
+    PostsListComponent
   ]
 })
-export class StoriesListModule { }
+export class PostsListModule { }

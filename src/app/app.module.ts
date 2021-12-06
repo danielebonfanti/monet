@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { StoriesListModule } from './stories-list/stories-list.module';
+import { PostsListModule } from './posts-list/posts-list.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { StoriesListModule } from './stories-list/stories-list.module';
   ],
   imports: [
     BrowserModule,
-    StoriesListModule
+    PostsListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
