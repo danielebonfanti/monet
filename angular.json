@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "monet:build:production",
+            "firebaseProject": "monet-af14e",
+            "firebaseHostingSite": "monet-af14e"
+          }
         }
       }
     }

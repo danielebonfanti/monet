@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "monet-af14e"
+  },
+  "targets": {
+    "monet-af14e": {
+      "hosting": {
+        "monet": [
+          "monet-af14e"
+        ]
+      }
+    }
   }
 }
