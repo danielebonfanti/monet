@@ -1,1 +1,7 @@
-<p>{{post | json}}</p>
+<mat-card class="card">
+  <mat-card-title>{{ post.title }}</mat-card-title>
+  <img mat-card-image src="{{ post.image }}" />
+  <mat-card-content>
+    <p>{{ post.text }}</p>
+  </mat-card-content>
+</mat-card>

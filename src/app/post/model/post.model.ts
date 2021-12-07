@@ -1,4 +1,5 @@
 export class Post {
     title = "";
-    text = ""
+    text = "";
+    image = "";
 }
