@@ -1,18 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PostsListComponent } from './posts-list.component';
+import { NgModule } from '@angular/core';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { PostModule } from '../post/post.module';
-
+import { PostsListComponent } from './posts-list.component';
 @NgModule({
-  declarations: [
-    PostsListComponent
-  ],
-  imports: [
-    CommonModule,
-    PostModule
-  ],
-  exports: [
-    PostsListComponent
-  ]
+  declarations: [PostsListComponent],
+  imports: [CommonModule, PostModule, MatGridListModule],
+  exports: [PostsListComponent],
 })
-export class PostsListModule { }
+export class PostsListModule {}

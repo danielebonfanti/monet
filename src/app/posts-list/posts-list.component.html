@@ -1,1 +1,5 @@
-<post *ngFor="let post of posts$ | async" [post]="post"></post>
+<mat-grid-list cols="{{numberOfColumn}}">
+    <mat-grid-tile *ngFor="let post of posts$ | async">
+        <post  [post]="post"></post>
+    </mat-grid-tile>
+</mat-grid-list>
