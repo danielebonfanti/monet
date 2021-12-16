@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1 # Setup di Node utilizzando la action https://github.com/actions/setup-node
-        with:
-          node-version: '10.x' # Nel nostro caso, utilizziamo la versione 10.x di Node
+      - uses: actions/setup-node@v1
       - name: Build
-        run: | # Esecuzione dei comandi di setup e build del progetto Angular, non dimenticando il parametro --base-href nel comando di build!
+        run: |
           npm install -g @angular/cli
           npm install
           ng build --prod
