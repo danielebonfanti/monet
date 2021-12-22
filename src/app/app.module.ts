@@ -8,9 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { PostsListModule } from './posts-list/posts-list.module';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactsComponent],
   imports: [
     BrowserModule,
     PostsListModule,
@@ -19,6 +21,7 @@ import { PostsListModule } from './posts-list/posts-list.module';
     BrowserAnimationsModule,
     MatToolbarModule,
     LayoutModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
