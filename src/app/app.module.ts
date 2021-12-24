@@ -2,6 +2,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,7 +12,6 @@ import { AppRoutingModule } from './app.routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { PostsListModule } from './posts-list/posts-list.module';
 import { SettingsModule } from './settings/settings.module';
-
 @NgModule({
   declarations: [AppComponent, ContactsComponent],
   imports: [
@@ -23,7 +23,8 @@ import { SettingsModule } from './settings/settings.module';
     MatToolbarModule,
     LayoutModule,
     AppRoutingModule,
-    SettingsModule
+    SettingsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
