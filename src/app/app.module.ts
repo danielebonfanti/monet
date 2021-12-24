@@ -7,9 +7,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { PostsListModule } from './posts-list/posts-list.module';
-import { ContactsComponent } from './contacts/contacts.component';
 import { AppRoutingModule } from './app.routing.module';
+import { ContactsComponent } from './contacts/contacts.component';
+import { PostsListModule } from './posts-list/posts-list.module';
+import { SettingsModule } from './settings/settings.module';
 
 @NgModule({
   declarations: [AppComponent, ContactsComponent],
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserAnimationsModule,
     MatToolbarModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SettingsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
