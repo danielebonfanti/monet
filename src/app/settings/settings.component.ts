@@ -10,9 +10,7 @@ export class SettingsComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(SettingsDialog, {
-      width: '250px',
-    });
+    const dialogRef = this.dialog.open(SettingsDialog);
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(result);
