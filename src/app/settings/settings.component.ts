@@ -25,12 +25,15 @@ export class SettingsComponent {
   templateUrl: 'settings-dialog.html',
 })
 export class SettingsDialog {
-  isChecked = false;
-
   constructor(private renderer: Renderer2) {}
 
-  setTheme() {
-    this.renderer.addClass(document.body, 'light-theme');
-    this.renderer.removeClass(document.body, 'dark-theme');
+  setTheme(checked: any) {
+    if (checked) {
+      this.renderer.addClass(document.body, 'light-theme');
+      this.renderer.removeClass(document.body, 'dark-theme');
+    } else {
+      this.renderer.removeClass(document.body, 'light-theme');
+      this.renderer.addClass(document.body, 'dark-theme');
+    }
   }
 }
