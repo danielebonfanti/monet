@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -23,15 +23,5 @@ export class SettingsComponent {
   templateUrl: 'settings-dialog.html',
 })
 export class SettingsDialog {
-  constructor(private renderer: Renderer2) {}
-
-  setTheme(checked: any) {
-    if (checked) {
-      this.renderer.addClass(document.body, 'light-theme');
-      this.renderer.removeClass(document.body, 'dark-theme');
-    } else {
-      this.renderer.removeClass(document.body, 'light-theme');
-      this.renderer.addClass(document.body, 'dark-theme');
-    }
-  }
+  constructor() {}
 }

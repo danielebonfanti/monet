@@ -5,9 +5,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SettingsComponent, SettingsDialog } from './settings.component';
+import { ThemeSettingComponent } from './theme-setting/theme-setting.component';
 
 @NgModule({
-  declarations: [SettingsComponent, SettingsDialog],
+  declarations: [SettingsComponent, SettingsDialog, ThemeSettingComponent],
   imports: [
     CommonModule,
     MatIconModule,
