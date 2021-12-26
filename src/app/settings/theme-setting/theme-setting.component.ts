@@ -1,5 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'theme-setting',
@@ -10,27 +10,18 @@ export class ThemeSettingComponent implements OnInit {
   isChecked = false;
 
   constructor(
-    private renderer: Renderer2,
-    private storageService: LocalStorageService
+    private readonly themeService: ThemeService  
   ) {}
 
   ngOnInit(): void {
-    this.isChecked = this.isLightTheme();
+    this.isChecked = this.themeService.isLightTheme();
   }
 
-  private isLightTheme(): boolean {
-    return Boolean(this.storageService.getInfo('lightTheme')) ?? false;
-  }
-
-  setTheme(checked: any): void {
+  setTheme(checked: boolean): void {
     if (checked) {
-      this.renderer.addClass(document.body, 'light-theme');
-      this.renderer.removeClass(document.body, 'dark-theme');
-      this.storageService.setInfo('lightTheme', 'true')
+      this.themeService.setLightTheme();
     } else {
-      this.renderer.removeClass(document.body, 'light-theme');
-      this.renderer.addClass(document.body, 'dark-theme');
-      this.storageService.setInfo('lightTheme', 'false')
+      this.themeService.setDarkTheme();
     }
   }
 }
