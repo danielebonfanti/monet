@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from '../post/model/post.model';
+import { PostsService } from '../posts-list/services/posts.service';
 
 @Component({
   selector: 'post-content',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-content.component.scss']
 })
 export class PostContentComponent implements OnInit {
+  post!: Post;
 
-  constructor() { }
+  constructor(private readonly postsService: PostsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    let id: number;
+    this.route.params.subscribe(params => {
+      id = +params['id'];
+      this.postsService.item$.subscribe(posts => {
+        this.post = posts[id];
+        console.log(this.post);
+      })
+    });
   }
 
 }
