@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PostContentComponent } from './post-content.component';
+
+
+
+@NgModule({
+  declarations: [
+    PostContentComponent
+  ],
+  imports: [
+    CommonModule
+  ]
+})
+export class PostContentModule { }
