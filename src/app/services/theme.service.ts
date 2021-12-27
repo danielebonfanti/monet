@@ -3,7 +3,7 @@ import { LocalStorageService } from './local-storage.service';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
-    private renderer: Renderer2;
+  private renderer: Renderer2;
 
   constructor(
     private readonly storageService: LocalStorageService,
@@ -13,7 +13,7 @@ export class ThemeService {
   }
 
   isLightTheme(): boolean {
-    return Boolean(this.storageService.getInfo('lightTheme')) ?? false;
+    return this.storageService.getInfo('lightTheme') == 'true';
   }
 
   setLightTheme(): void {
