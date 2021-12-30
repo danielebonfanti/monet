@@ -53,3 +53,7 @@ body {
   @include mat.all-component-themes($light-theme);
   background-color: white;
 }
+
+.link:hover {
+  cursor: pointer;
+}
