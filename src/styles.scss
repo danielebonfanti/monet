@@ -52,6 +52,9 @@ body {
 .light-theme {
   @include mat.all-component-themes($light-theme);
   background-color: white;
+  mat-grid-list {
+    background-color: white;
+  }
 }
 
 .link:hover {
