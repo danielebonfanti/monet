@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject, takeUntil } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Breakpoint } from '../model/breakpoint.enum';
 import { Post } from '../post/model/post.model';
 import { LayoutService } from '../services/layout.service';
@@ -31,9 +31,11 @@ export class PostsListComponent implements OnInit {
           break;
         case Breakpoint.Medium:
         case Breakpoint.Large:
+          this.numberOfColumn = 3;
+          break;
         case Breakpoint.XLarge:
         default:
-          this.numberOfColumn = 3;
+          this.numberOfColumn = 5;
           break;
       }
     });
