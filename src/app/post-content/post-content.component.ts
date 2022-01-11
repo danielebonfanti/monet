@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from '../post/model/post.model';
 import { PostsService } from '../posts-list/services/posts.service';
@@ -6,7 +6,8 @@ import { PostsService } from '../posts-list/services/posts.service';
 @Component({
   selector: 'post-content',
   templateUrl: './post-content.component.html',
-  styleUrls: ['./post-content.component.scss']
+  styleUrls: ['./post-content.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PostContentComponent implements OnInit {
   post!: Post;
