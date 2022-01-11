@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Breakpoint } from '../model/breakpoint.enum';
 import { Post } from '../post/model/post.model';
@@ -9,6 +9,7 @@ import { PostsService } from './services/posts.service';
   selector: 'posts-list',
   templateUrl: './posts-list.component.html',
   styleUrls: ['./posts-list.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PostsListComponent implements OnInit {
   posts$ = new Observable<Post[]>();
