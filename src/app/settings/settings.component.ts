@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SettingsComponent {
   constructor(public dialog: MatDialog) {}
