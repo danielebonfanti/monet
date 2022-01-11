@@ -41,10 +41,9 @@ html,
 body {
   height: 100%;
   background-color: black;
-}
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: white;
 }
 
 // Apply the light theme only when the `.light-theme` CSS class is applied
@@ -52,6 +51,7 @@ body {
 .light-theme {
   @include mat.all-component-themes($light-theme);
   background-color: white;
+  color: black;
   mat-grid-list {
     background-color: white;
   }
