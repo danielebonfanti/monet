@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'theme-setting',
   templateUrl: './theme-setting.component.html',
   styleUrls: ['./theme-setting.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ThemeSettingComponent implements OnInit {
   isChecked = false;
