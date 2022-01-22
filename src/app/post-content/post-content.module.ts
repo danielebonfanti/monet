@@ -6,6 +6,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
   declarations: [PostContentComponent],
   imports: [CommonModule, MatGridListModule],
-  exports: [PostContentComponent]
+  exports: [PostContentComponent],
 })
 export class PostContentModule {}

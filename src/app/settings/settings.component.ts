@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
   selector: 'settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class SettingsComponent {
   constructor(public dialog: MatDialog) {}

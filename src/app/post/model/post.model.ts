@@ -1,6 +1,6 @@
 export class Post {
-    title = "";
-    text = "";
-    image = "";
-    preview = "";
+  title = '';
+  text = '';
+  image = '';
+  preview = '';
 }

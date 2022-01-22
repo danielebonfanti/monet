@@ -8,9 +8,8 @@ describe('ThemeSettingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeSettingComponent ]
-    })
-    .compileComponents();
+      declarations: [ThemeSettingComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

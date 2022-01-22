@@ -22,10 +22,10 @@ import { PostsListModule } from './posts-list/posts-list.module';
     BrowserAnimationsModule,
     LayoutModule,
     AppRoutingModule,
-    MonetHeaderModule
+    MonetHeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [MatIconModule]
+  exports: [MatIconModule],
 })
 export class AppModule {}

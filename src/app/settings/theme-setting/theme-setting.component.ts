@@ -5,14 +5,12 @@ import { ThemeService } from 'src/app/services/theme.service';
   selector: 'theme-setting',
   templateUrl: './theme-setting.component.html',
   styleUrls: ['./theme-setting.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class ThemeSettingComponent implements OnInit {
   isChecked = false;
 
-  constructor(
-    private readonly themeService: ThemeService  
-  ) {}
+  constructor(private readonly themeService: ThemeService) {}
 
   ngOnInit(): void {
     this.isChecked = this.themeService.isLightTheme();

@@ -5,14 +5,12 @@ import { Post } from './model/post.model';
   selector: 'post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class PostComponent implements OnInit {
   @Input() post!: Post;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

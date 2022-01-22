@@ -9,7 +9,7 @@ import { PostsService } from './services/posts.service';
   selector: 'posts-list',
   templateUrl: './posts-list.component.html',
   styleUrls: ['./posts-list.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class PostsListComponent implements OnInit {
   posts$ = new Observable<Post[]>();

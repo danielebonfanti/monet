@@ -7,22 +7,24 @@ import { PostsService } from '../posts-list/services/posts.service';
   selector: 'post-content',
   templateUrl: './post-content.component.html',
   styleUrls: ['./post-content.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class PostContentComponent implements OnInit {
   post!: Post;
 
-  constructor(private readonly postsService: PostsService, private route: ActivatedRoute) { }
+  constructor(
+    private readonly postsService: PostsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     let id: number;
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       id = +params['id'];
-      this.postsService.item$.subscribe(posts => {
+      this.postsService.item$.subscribe((posts) => {
         this.post = posts[id];
         console.log(this.post);
-      })
+      });
     });
   }
-
 }
