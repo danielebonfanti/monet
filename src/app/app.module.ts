@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MonetHeaderModule } from './header/monet-header.module';
+import { LoginModule } from './login/login.module';
 import { PostsListModule } from './posts-list/posts-list.module';
 
 @NgModule({
@@ -23,6 +24,8 @@ import { PostsListModule } from './posts-list/posts-list.module';
     LayoutModule,
     AppRoutingModule,
     MonetHeaderModule,
+    LoginModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
