@@ -1,3 +1,17 @@
-<h1>{{post.title}}</h1>
-<img [src]="post.image"/>
-<div>{{post.text}}</div>
+<mat-grid-list cols="9" rowHeight="100%">
+  <mat-grid-tile colspan="2"></mat-grid-tile>
+  <mat-grid-tile colspan="5">
+    <div class="content-wrapper">
+      <div class="content-body">
+        <div class="image-wrapper">
+          <img [src]="post.image" class="header-image" />
+        </div>
+        <div class="body-wrapper">
+          <h1>{{ post.title }}</h1>
+          <div>{{ post.text }}</div>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2"></mat-grid-tile>
+</mat-grid-list>

@@ -1,15 +1,20 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$my-custom-typography: mat.define-typography-config(
+  $display-4: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat.define-typography-level(34px, 40px, 400),
+  $headline:  mat.define-typography-level(24px, 32px, 400),
+  $font-family: "Montserrat"
+);
+
+@include mat.core($my-custom-typography);
 
 // Define a light theme
-$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-primary: mat.define-palette(mat.$orange-palette);
 $light-accent: mat.define-palette(mat.$pink-palette);
 $light-theme: mat.define-light-theme(
   (
@@ -21,8 +26,8 @@ $light-theme: mat.define-light-theme(
 );
 
 // Define a dark theme
-$dark-primary: mat.define-palette(mat.$pink-palette);
-$dark-accent: mat.define-palette(mat.$blue-gray-palette);
+$dark-primary: mat.define-palette(mat.$amber-palette);
+$dark-accent: mat.define-palette(mat.$pink-palette);
 $dark-theme: mat.define-dark-theme(
   (
     color: (
@@ -41,10 +46,9 @@ html,
 body {
   height: 100%;
   background-color: black;
-}
-body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Montserrat";
+  color: white;
 }
 
 // Apply the light theme only when the `.light-theme` CSS class is applied
@@ -52,8 +56,13 @@ body {
 .light-theme {
   @include mat.all-component-themes($light-theme);
   background-color: white;
+  color: black;
+  mat-grid-list {
+    background-color: white;
+  }
 }
 
 .link:hover {
   cursor: pointer;
 }
+
