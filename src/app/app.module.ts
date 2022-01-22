@@ -12,6 +12,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { MonetHeaderModule } from './header/monet-header.module';
 import { LoginModule } from './login/login.module';
 import { PostsListModule } from './posts-list/posts-list.module';
+import { AuthModule } from "@angular/fire/auth";
 
 @NgModule({
   declarations: [AppComponent, ContactsComponent],
@@ -25,7 +26,8 @@ import { PostsListModule } from './posts-list/posts-list.module';
     AppRoutingModule,
     MonetHeaderModule,
     LoginModule,
-    MatIconModule
+    MatIconModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

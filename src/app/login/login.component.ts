@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'login',
@@ -6,8 +8,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./login.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LoginComponent implements OnInit {
-  constructor() {}
+export class LoginComponent {
+  constructor(private readonly authenticationService: AuthenticationService) {}
 
-  ngOnInit(): void {}
+  onSubmit(f: NgForm) {
+    this.authenticationService.login(f.value.email, f.value.password)
+       .then(() => alert("Login success"))
+       .catch(() => alert("Login failed"))
+  }
 }
