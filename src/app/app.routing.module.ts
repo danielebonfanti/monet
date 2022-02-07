@@ -9,6 +9,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: 'new-post',
+    loadChildren: () =>
+      import('./new-post/new-post.module').then((m) => m.NewPostModule),
+  },
 ];
 
 @NgModule({
