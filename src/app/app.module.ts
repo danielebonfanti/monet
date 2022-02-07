@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MonetHeaderModule } from './header/monet-header.module';
-import { LoginModule } from './login/login.module';
 import { PostsListModule } from './posts-list/posts-list.module';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 
@@ -26,8 +25,6 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AppRoutingModule,
     MonetHeaderModule,
     provideAuth(() => getAuth()),
-    LoginModule,
-    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
