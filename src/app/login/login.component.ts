@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
@@ -9,12 +10,20 @@ import { AuthenticationService } from '../services/authentication.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent {
-  constructor(private readonly authenticationService: AuthenticationService) {}
+  errorMessage = false;
+
+  constructor(
+    private readonly authenticationService: AuthenticationService,
+    private readonly router: Router
+  ) {}
 
   onSubmit(f: NgForm) {
     this.authenticationService
-      .login({ email: f.value.email, password: f.value.password })
-      .then(() => alert('Login success'))
-      .catch(() => alert('Login failed'));
+      .login({
+        email: f.value.email,
+        password: f.value.password,
+      })
+      .then(() => this.router.navigate(['/', 'new-post']))
+      .catch(() => (this.errorMessage = true));
   }
 }
