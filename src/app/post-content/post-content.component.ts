@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Post } from '../post/model/post.model';
+import { Post } from '../model/post.model';
 import { PostsService } from '../posts-list/services/posts.service';
 
 @Component({

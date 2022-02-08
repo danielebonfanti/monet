@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Breakpoint } from '../model/breakpoint.enum';
-import { Post } from '../post/model/post.model';
+import { Post } from '../model/post.model';
 import { LayoutService } from '../services/layout.service';
 import { PostsService } from './services/posts.service';
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { Post } from './model/post.model';
+import { Post } from '../model/post.model';
 
 @Component({
   selector: 'post',

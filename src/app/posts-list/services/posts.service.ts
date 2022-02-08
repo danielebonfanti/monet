@@ -6,7 +6,7 @@ import {
   Firestore,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { Post } from 'src/app/post/model/post.model';
+import { Post } from 'src/app/model/post.model';
 
 @Injectable({
   providedIn: 'root',
