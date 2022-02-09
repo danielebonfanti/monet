@@ -1,6 +1,11 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getApp, initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import {
+  browserSessionPersistence,
+  initializeAuth,
+  provideAuth,
+} from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +16,6 @@ import { AppRoutingModule } from './app.routing.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { MonetHeaderModule } from './header/monet-header.module';
 import { PostsListModule } from './posts-list/posts-list.module';
-import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent, ContactsComponent],
@@ -24,7 +28,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     LayoutModule,
     AppRoutingModule,
     MonetHeaderModule,
-    provideAuth(() => getAuth()),
+    provideAuth(() =>
+      initializeAuth(getApp(), {
+        persistence: browserSessionPersistence,
+        popupRedirectResolver: undefined,
+      })
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent],
