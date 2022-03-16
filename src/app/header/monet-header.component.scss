@@ -1,7 +1,11 @@
-monet-header {
+mat-toolbar {
+  background: white !important;
+}
+
   .spacer {
     flex: 1 1 auto;
   }
+
 
   .toolbox {
     display: flex;
@@ -12,4 +16,3 @@ monet-header {
     padding: 0.5vw;
     display: inherit;
   }
-}
