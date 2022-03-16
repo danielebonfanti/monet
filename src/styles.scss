@@ -41,17 +41,17 @@ $dark-theme: mat.define-dark-theme(
 );
 
 // Apply the dark theme by default
-@include mat.all-component-themes($dark-theme);
+@include mat.all-component-themes($light-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
   height: 100%;
-  background-color: black;
+  background-color: white;
   margin: 0;
   font-family: "Montserrat";
-  color: white;
+  color: black;
 }
 
 // Apply the light theme only when the `.light-theme` CSS class is applied

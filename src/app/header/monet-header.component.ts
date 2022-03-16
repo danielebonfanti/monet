@@ -1,13 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'monet-header',
   templateUrl: './monet-header.component.html',
   styleUrls: ['./monet-header.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
-export class MonetHeaderComponent implements OnInit {
+export class MonetHeaderComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

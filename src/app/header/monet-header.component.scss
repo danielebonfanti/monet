@@ -1,15 +1,17 @@
-monet-header {
-  .spacer {
-    flex: 1 1 auto;
-  }
+mat-toolbar {
+  background: white !important;
+}
 
-  .toolbox {
-    display: flex;
-    align-items: center;
-  }
+.spacer {
+  flex: 1 1 auto;
+}
 
-  .toolbox-item {
-    padding: 0.5vw;
-    display: inherit;
-  }
+.toolbox {
+  display: flex;
+  align-items: center;
+}
+
+.toolbox-item {
+  padding: 0.5vw;
+  display: inherit;
 }
