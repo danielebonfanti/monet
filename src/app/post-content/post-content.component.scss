@@ -1,0 +1,32 @@
+post-content {
+  .header-image {
+    height: 10vw;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 2vw;
+  }
+
+  .image-wrapper {
+    text-align: center;
+  }
+
+  .mat-grid-tile-content {
+    align-items: unset;
+  }
+
+  .body-wrapper {
+  }
+
+  .content-margin {
+    width: 20%;
+  }
+
+  .content-body {
+    width: 100%;
+  }
+}

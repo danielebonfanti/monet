@@ -1,7 +1,4 @@
-import {
-    BreakpointObserver,
-    Breakpoints
-} from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Breakpoint } from '../model/breakpoint.enum';

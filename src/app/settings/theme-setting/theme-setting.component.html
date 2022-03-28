@@ -1,0 +1,8 @@
+<div class="theme-setting-wrapper">
+  <mat-icon class="mr-8">brightness_5</mat-icon>
+  <span class="label">LIGHT THEME</span>
+  <mat-slide-toggle
+    [checked]="isChecked"
+    (change)="setTheme($event.checked)"
+  ></mat-slide-toggle>
+</div>
