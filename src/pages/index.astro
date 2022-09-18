@@ -40,9 +40,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					{posts.map((post) => (
 						<li>
 							<time datetime={post.frontmatter.pubDate}>
-								{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+								{new Date(post.frontmatter.pubDate).toLocaleDateString('it-IT', {
 									year: 'numeric',
-									month: 'short',
+									month: 'long',
 									day: 'numeric',
 								})}
 							</time>
@@ -52,6 +52,5 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				</ul>
 			</section>
 		</main>
-		<Footer />
 	</body>
 </html>
