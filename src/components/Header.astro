@@ -3,12 +3,9 @@ import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h2 >
-		<a href="../index.html">{SITE_TITLE}</a> 
+	<h2>
+		<a id="title" href="../index.html">{SITE_TITLE}</a> 
 	</h2>
-	<nav>
-		
-	</nav>
 </header>
 <style>
 	header {
@@ -16,8 +13,9 @@ import { SITE_TITLE } from '../config';
 	}
 	h2 {
 		margin: 0.5em 0;
-		a {
-			text-decoration: none;
-		}
+	}
+	#title {
+		text-decoration: none;
+		color: black;
 	}
 </style>
