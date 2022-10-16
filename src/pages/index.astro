@@ -27,8 +27,14 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				font-style: italic;
 				color: #888;
 			}
-			ul li a:visited {
-				color: #8e32dc;
+			a {
+				color: black !important;
+			}
+			a:link {
+				text-decoration: none;				
+			}
+			a:hover {
+				color: red !important;
 			}
 		</style>
 	</head>
